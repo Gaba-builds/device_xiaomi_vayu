@@ -124,6 +124,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+# DebugFS
+PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \

@@ -104,7 +104,7 @@ debug.sf.enable_gl_backpressure=1
 debug.sf.hw=0
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
-persist.sys.sf.native_mode=0
+persist.sys.sf.native_mode=2
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
@@ -122,6 +122,8 @@ vendor.display.enable_default_color_mode=0
 vendor.display.enable_force_split=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
+vendor.display.qdcm.disable_factory_mode=1
+vendor.display.qdcm.mode_combine=1
 vendor.gralloc.disable_ubwc=0
 
 # Listen

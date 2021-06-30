@@ -611,16 +611,16 @@
     <!-- Flashlight on power button -->
     <integer name="config_flashlightProximityTimeout">3000</integer>
 
-    <!-- List supported color modes. -->
+    <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
     <integer-array name="config_availableColorModes">
-        <item>0</item> <!-- COLOR_MODE_NATURAL -->
-        <item>1</item> <!-- COLOR_MODE_BOOSTED -->
-        <item>2</item> <!-- COLOR_MODE_SATURATED -->
+        <item>0</item> <!-- COLOR_MODE_NATURAL   -->
+        <item>1</item> <!-- COLOR_MODE_BOOSTED   -->
+        <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->
     </integer-array>
 
     <!-- Color mode to use when accessibility transforms are enabled. This color mode must be
-     supported by the device, but not necessarily appear in config_availableColorModes. The
-     regularly selected color mode will be used if this value is negative. -->
+         supported by the device, but not necessarily appear in config_availableColorModes. The
+         regularly selected color mode will be used if this value is negative. -->
     <integer name="config_accessibilityColorMode">2</integer>
 
     <!-- The following two arrays specify which color space to use for display composition when a
@@ -638,23 +638,29 @@
         <item>0</item> <!-- COLOR_MODE_NATURAL   -->
         <item>1</item> <!-- COLOR_MODE_BOOSTED   -->
         <item>2</item> <!-- COLOR_MODE_SATURATED -->
+        <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->
     </integer-array>
+
     <integer-array name="config_displayCompositionColorSpaces">
-        <item>0</item> <!-- COLOR_MODE_DEFAULT    -->
-        <item>0</item> <!-- COLOR_MODE_DEFAULT    -->
-        <item>0</item> <!-- COLOR_MODE_DEFAULT    -->
+        <item>0</item> <!-- COLOR_MODE_DEFAULT -->
+        <item>0</item> <!-- COLOR_MODE_DEFAULT -->
+        <item>0</item> <!-- COLOR_MODE_DEFAULT -->
+        <item>9</item> <!-- COLOR_MODE_DISPLAY_P3 -->
     </integer-array>
 
-   <!-- Do the battery/notification LEDs support pulsing?
+    <!-- Whether or not wcg mode should be enabled on this device -->
+    <bool name="config_enableWcgMode">true</bool>
+
+    <!-- Do the battery/notification LEDs support pulsing?
          Used to decide if we show pulse settings -->
-   <bool name="config_ledCanPulse">true</bool>
+    <bool name="config_ledCanPulse">true</bool>
 
-   <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-   <bool name="config_intrusiveBatteryLed">true</bool>
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveBatteryLed">true</bool>
 
-   <!-- Does the battery LED support multiple colors?
+    <!-- Does the battery LED support multiple colors?
          Used to decide if the user can change the colors -->
-   <bool name="config_multiColorBatteryLed">false</bool>
+    <bool name="config_multiColorBatteryLed">false</bool>
 
     <!-- The default journal mode to use use when Write-Ahead Logging is not active.
          Choices are: OFF, DELETE, TRUNCATE, PERSIST and MEMORY.

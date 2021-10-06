@@ -21,6 +21,8 @@
 
     <!-- Ambient settings -->
     <string name="ambient_enable">Use ambient display</string>
+    <string name="doze_summary">Advanced Ambient Display Preferences</string>
+
 
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles</string>

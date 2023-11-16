@@ -409,8 +409,6 @@ vendor/lib64/hw/consumerir.default.so
 
 # Display calibration data
 vendor/etc/hdr_config.cfg
-vendor/etc/qdcm_calib_data_xiaomi_36_02_0a_video_mode_dsc_dsi_panel.xml
-vendor/etc/qdcm_calib_data_xiaomi_42_02_0b_video_mode_dsc_dsi_panel.xml
 vendor/etc/sdr_config.cfg
 
 # Display (HDR) - from LA.UM.9.1.r1-13700-SMxxx0.QSSI12.0

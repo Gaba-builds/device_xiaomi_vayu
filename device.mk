@@ -333,6 +333,7 @@ PRODUCT_PACKAGES += \
     libcodec2_vndk.vendor \
     libsfplugin_ccodec_utils.vendor \
     libmm-omxcore \
+    libstagefright_foundation-v33 \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \

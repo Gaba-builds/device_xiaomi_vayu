@@ -102,6 +102,7 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libdng_sdk.vendor \
     libgui_vendor \
+    libpng.vendor \
     libxml2 \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
@@ -417,7 +418,8 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor \
     libjson \
     libprotobuf-cpp-full \
-    librmnetctl
+    librmnetctl \
+    libsqlite.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \

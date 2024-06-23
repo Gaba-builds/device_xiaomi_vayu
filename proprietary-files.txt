@@ -603,8 +603,8 @@ system_ext/lib64/lib-imsvt.so|66f0d6f0c82b694005aa77a794a27a25fa18cc62
 system_ext/lib64/lib-imsvtextutils.so|50a092eb7b490f4307bddb3d5a4c595b458bc503
 system_ext/lib64/lib-imsvtutils.so|01410f799542bedc47a9795961a681a4afeb8ff1
 system_ext/lib64/libdiag_system.so|22fb08478936c1520d71880c42650501344b8f27
-system_ext/lib64/libimscamera_jni.so|140dba66979472050d044958f2aaed537d18cdc2
-system_ext/lib64/libimsmedia_jni.so|d06732d17342e445477ba508ae575263dc2096cb
+system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so|140dba66979472050d044958f2aaed537d18cdc2
+system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so|d06732d17342e445477ba508ae575263dc2096cb
 system_ext/lib64/vendor.qti.diaghal@1.0.so|d0e63f3676a43466122d3494f2c82472546c7b3f
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9494fd
 -system_ext/priv-app/ims/ims.apk|382b9c5942cb9420a2032912289ab855fb206885

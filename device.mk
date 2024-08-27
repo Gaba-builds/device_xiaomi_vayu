@@ -4,12 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Enforce native interfaces of product partition as VNDK
-PRODUCT_PRODUCT_VNDK_VERSION := current
-
-# Enforce java interfaces of product partition
-PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
-
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -25,10 +19,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Shipping level
 PRODUCT_SHIPPING_API_LEVEL := 30
-BOARD_SHIPPING_API_LEVEL := 30
-
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 30
 
 # Dynamic partitions setup
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -103,6 +93,7 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     libpng.vendor \
     libxml2 \
+    vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 PRODUCT_PACKAGES += \
@@ -135,11 +126,6 @@ PRODUCT_COPY_FILES += \
 # DeviceSettings
 PRODUCT_PACKAGES += \
     XiaomiParts
-
-# Dex
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
-endif
 
 # Display
 PRODUCT_PACKAGES += \
@@ -514,10 +500,6 @@ PRODUCT_COPY_FILES += \
 # Vndservicemanager
 PRODUCT_PACKAGES += \
     vndservicemanager
-
-# VNDK
-PRODUCT_PACKAGES += \
-    com.android.vndk.current.on_vendor
 
 # WiFi
 PRODUCT_PACKAGES += \

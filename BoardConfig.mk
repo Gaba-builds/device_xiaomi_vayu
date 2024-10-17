@@ -60,28 +60,23 @@ LOC_HIDL_VERSION := 4.0
 TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY := 304
 
 # Kernel
-BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7 androidboot.usbcontroller=a600000.dwc3
+BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=qcom
+BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
+BOARD_KERNEL_IMAGE_NAME := Image.gz
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-
-BOARD_KERNEL_CMDLINE := \
-    androidboot.console=ttyMSM0 \
-    androidboot.hardware=qcom \
-    androidboot.usbcontroller=a600000.dwc3 \
-    console=ttyMSM0,115200n8 \
-    earlycon=msm_geni_serial,0xa90000 \
-    loop.max_part=7 \
-    lpm_levels.sleep_disabled=1 \
-    service_locator.enable=1
-
-BOARD_MKBOOTIMG_ARGS := --header_version 2
-
-TARGET_KERNEL_CLANG_COMPILE := true
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8150
+TARGET_KERNEL_CONFIG += vendor/xiaomi/vayu.config
 TARGET_KERNEL_CLANG_VERSION := r487747c
-TARGET_KERNEL_CONFIG := vayu_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/vayu
+TARGET_KERNEL_CONFIG := \
+    vendor/sm8150-perf_defconfig \
+    vendor/debugfs.config \
+    vendor/xiaomi/sm8150-common.config
 
 # Partitions
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
